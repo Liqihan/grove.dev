@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import fetch from '@/lib/fetch'
 
 export function middleware(request, event) {
   const { pathname } = request.nextUrl

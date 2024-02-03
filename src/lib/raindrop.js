@@ -1,4 +1,5 @@
 import { COLLECTION_IDS } from '@/lib/constants'
+import fetch from '@/lib/fetch'
 
 const options = {
   method: 'GET',

@@ -1,4 +1,5 @@
 import { isDevelopment } from '@/lib/utils'
+import fetch from '@/lib/fetch'
 
 async function fetchGraphQL(query, preview = isDevelopment) {
   const res = await fetch(`https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`, {
@@ -11,6 +12,9 @@ async function fetchGraphQL(query, preview = isDevelopment) {
     },
     body: JSON.stringify({ query })
   })
+  console.log(23423423, res.ok)
+  const result = await res.json()
+  console.log(2222, result)
   if (!res.ok) return undefined
   return res.json()
 }

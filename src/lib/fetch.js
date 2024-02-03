@@ -3,6 +3,7 @@ import nodeFetch from 'node-fetch'
 import { isDevelopment } from '@/lib/utils'
 
 const proxyfetch = (...args) => {
+
   if (isDevelopment) {
     const httpsProxyAgent = new HttpsProxyAgent(process.env.http_proxy)
 

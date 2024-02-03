@@ -12,9 +12,6 @@ async function fetchGraphQL(query, preview = isDevelopment) {
     },
     body: JSON.stringify({ query })
   })
-  console.log(23423423, res.ok)
-  const result = await res.json()
-  console.log(2222, result)
   if (!res.ok) return undefined
   return res.json()
 }
